@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wedding Invitation</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- ================= CURTAIN OPENING ================= -->
+<div id="particles"></div>
+<div id="petals"></div>
+<div id="curtain">
+  <div class="curtain-left"></div>
+  <div class="curtain-right"></div>
+
+  <div class="curtain-content">
+    <h1 class="couple-names">Bride & Groom</h1>
+    <p class="subtitle">Wedding Invitation</p>
+    <button id="openBtn">Open Invitation</button>
+  </div>
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div id="main">
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 id="brideGroomNames">Ahmed & Sara</h1>
+      <p class="wedding-date">Friday, 25 December 2026</p>
+
+      <div class="countdown">
+        <div><span id="days">0</span><p>Days</p></div>
+        <div><span id="hours">0</span><p>Hours</p></div>
+        <div><span id="minutes">0</span><p>Minutes</p></div>
+        <div><span id="seconds">0</span><p>Seconds</p></div>
+      </div>
+
+      <button id="musicBtn">Play Music</button>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="story">
+    <h2>Our Story</h2>
+    <p>
+      A beautiful journey begins here. Two hearts, one destiny.
+      This is the start of forever.
+    </p>
+  </section>
+
+  <!-- DETAILS SECTION -->
+  <section class="details">
+    <h2>Wedding Details</h2>
+
+    <div class="detail-box">
+      <h3>Date</h3>
+      <p>Friday, 25 December 2026</p>
+    </div>
+
+    <div class="detail-box">
+      <h3>Time</h3>
+      <p>7:00 PM</p>
+    </div>
+
+    <div class="detail-box">
+      <h3>Venue</h3>
+      <p>Erbil Grand Hall</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="">
+      <img src="images/gallery2.jpg" alt="">
+      <img src="images/gallery3.jpg" alt="">
+      <img src="images/gallery4.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map">
+    <h2>Location</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb="
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>With love ❤️</p>
+    <p>Wedding Invitation 2026</p>
+  </footer>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="music/wedding.mp3" type="audio/mp3">
+</audio>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
