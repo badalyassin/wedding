@@ -1,0 +1,173 @@
+/* ==========================================================================
+   NIVIN GROUP — Digital Wedding Invitation
+   css/responsive.css — Breakpoints: 390 / 430 / 768 / 1024 / 1440
+   Mobile-first base lives in style.css; this file only adjusts scale/layout.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------
+   Small phones (< 390px) — tighten a hair further
+--------------------------------------------------------------------- */
+@media (max-width: 389px) {
+  .hero-names { font-size: 42px; }
+  .section { padding: var(--sp-5) var(--sp-2); }
+  .rsvp-actions, .countdown-grid { max-width: 100%; }
+  .envelope-scene { max-width: 320px; }
+}
+
+/* ---------------------------------------------------------------------
+   390px baseline (iPhone 12/13/14 mini-ish / small standard)
+--------------------------------------------------------------------- */
+@media (min-width: 390px) {
+  .hero-names { font-size: 50px; }
+}
+
+/* ---------------------------------------------------------------------
+   430px (iPhone Pro Max class)
+--------------------------------------------------------------------- */
+@media (min-width: 430px) {
+  .envelope-scene { max-width: 400px; }
+  .hero-names { font-size: 56px; }
+  .gallery-slide { width: 68%; }
+}
+
+/* ---------------------------------------------------------------------
+   768px (tablet / iPad portrait)
+--------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  :root { --max-width: 720px; }
+
+  .envelope-scene { max-width: 420px; }
+
+  .hero-content { padding: 0 var(--sp-4); }
+  .hero-names { font-size: 74px; }
+  .hero-request { font-size: 13px; }
+
+  .section { padding: var(--sp-6) var(--sp-4); }
+  .section-heading { font-size: 48px; }
+
+  .story-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .story-card-media { width: 42%; aspect-ratio: auto; }
+  .story-card-body { width: 58%; padding: var(--sp-5); display: flex; flex-direction: column; justify-content: center; }
+
+  .countdown-grid { max-width: 520px; }
+
+  .timeline-list { max-width: 560px; }
+
+  .gallery-slide { width: 46%; max-width: 340px; }
+
+  .rsvp-actions {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 620px;
+  }
+  .rsvp-actions .btn {
+    flex: 1 1 0;
+    width: auto;
+  }
+
+  .location-card { padding: var(--sp-5); }
+  .map-embed-wrap { aspect-ratio: 16 / 9; }
+}
+
+/* ---------------------------------------------------------------------
+   1024px (tablet landscape / small laptop)
+   The invitation is authored as a vertical "digital card" (per the
+   mockup's own phone-frame presentation). Rather than stretch the hero's
+   portrait SVG scene full-bleed across a wide short viewport — which
+   forces an ugly choice between cropping out the sky/sea (slice) or
+   leaving huge dead space (meet) — the whole invitation body is capped
+   to a centered card width on desktop, with the ivory page showing on
+   either side. This keeps every section (hero included) at the same
+   proportions it was designed for.
+--------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  :root { --max-width: 860px; }
+
+  body { font-size: 17px; }
+
+  .invitation-body {
+    background: #F0ECE1;
+  }
+  .invitation-body > header.hero,
+  .invitation-body > main,
+  .invitation-body > footer.site-footer {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--c-ivory);
+    box-shadow: 0 0 90px rgba(74,67,62,0.14);
+  }
+  .invitation-body > header.hero { overflow: hidden; min-height: 780px; }
+
+  .envelope-scene { max-width: 440px; }
+
+  .hero-names { font-size: 70px; }
+  .hero-venue-name { font-size: 28px; }
+
+  .section { padding: 6rem var(--sp-5); }
+  .section-heading { font-size: 46px; }
+
+  .timeline-list { max-width: 480px; }
+  .timeline-title { font-size: 24px; }
+
+  .gallery-track { justify-content: flex-start; padding: 0.5rem var(--sp-4) 1.4rem; }
+  .gallery-slide { width: 42%; max-width: 280px; }
+
+  .btn { font-size: 12.5px; padding: 1.05rem 1.8rem; }
+}
+
+/* ---------------------------------------------------------------------
+   1440px (desktop) — same centered-card approach, slightly wider card
+--------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  :root { --max-width: 960px; }
+
+  .envelope-stage { padding: var(--sp-6); }
+  .envelope-scene { max-width: 460px; }
+
+  .invitation-body > header.hero,
+  .invitation-body > main,
+  .invitation-body > footer.site-footer {
+    max-width: 780px;
+  }
+
+  .hero-names { font-size: 76px; }
+
+  .section-inner { max-width: 620px; }
+  .story-card { max-width: 700px; margin: 0 auto; }
+
+  .countdown-grid { max-width: 460px; }
+
+  .gallery-slide { width: 38%; max-width: 260px; }
+
+  .location-card { max-width: 620px; }
+  .rsvp-actions { max-width: 420px; }
+}
+
+/* ---------------------------------------------------------------------
+   Landscape phones — envelope + hero need shorter vertical rhythm
+--------------------------------------------------------------------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .envelope-stage { padding: var(--sp-2); }
+  .envelope-scene { max-width: 280px; }
+  .hero { padding-bottom: var(--sp-2); }
+  .hero-names { font-size: 40px; }
+  .hero-content { gap: 0.3rem; }
+}
+
+/* ---------------------------------------------------------------------
+   Fine-pointer hover affordances (skip on touch devices)
+--------------------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) {
+  .gallery-slide:hover { transform: translateY(-6px); box-shadow: 0 28px 50px -20px var(--c-shadow); }
+  .location-pin { transition: transform 0.3s var(--ease-soft); }
+  .location-card:hover .location-pin { transform: translateY(-3px); }
+}
+
+
+
+
