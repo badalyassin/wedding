@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>Siraj &amp; Enjli — You Are Invited</title>
+<meta name="description" content="Siraj &amp; Enjli request the pleasure of your company to celebrate their wedding — Saturday, August 23, 2026 at The Royal Garden Hall, Mosul, Iraq.">
+<meta name="theme-color" content="#FAF8F4">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Siraj &amp; Enjli — Wedding Invitation">
+<meta property="og:description" content="You are invited to celebrate our love — August 23, 2026">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:,">
+<link rel="preload" href="assets/fonts/CormorantGaramond-Light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/CormorantGaramond-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="envelope-body">
+
+<!-- =====================================================
+     LOADING SCREEN
+===================================================== -->
+<div id="loading-screen" class="loading-screen" role="status" aria-live="polite" aria-label="Loading invitation">
+  <div class="loading-content">
+    <svg class="loading-monogram" width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+      <circle cx="36" cy="36" r="34" fill="none" stroke="#C8A86A" stroke-width="0.75" opacity="0.5"/>
+      <text x="36" y="47" text-anchor="middle" class="loading-monogram-text">S&amp;E</text>
+    </svg>
+    <div class="loading-bar-track">
+      <div class="loading-bar-fill" id="loading-bar-fill"></div>
+    </div>
+    <p class="loading-label">Preparing your invitation</p>
+  </div>
+</div>
+
+<!-- =====================================================
+     ENVELOPE SCENE
+===================================================== -->
+<main class="envelope-stage" id="envelope-stage">
+
+  <div class="envelope-scene" id="envelope-scene">
+
+    <!-- floating particles -->
+    <div class="particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="envelope-3d" id="envelope-3d">
+
+      <!-- soft shadow -->
+      <div class="envelope-shadow" aria-hidden="true"></div>
+
+      <!-- BACK PANEL -->
+      <div class="envelope-layer envelope-back">
+        <svg viewBox="0 0 400 560" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFFDF9"/>
+              <stop offset="100%" stop-color="#F3EEE4"/>
+            </linearGradient>
+            <filter id="paperNoise">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+              <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.02 0"/>
+              <feComposite operator="over" in2="SourceGraphic"/>
+            </filter>
+          </defs>
+          <rect x="0" y="0" width="400" height="560" rx="4" fill="url(#paperGrad)"/>
+          <rect x="0" y="0" width="400" height="560" rx="4" fill="transparent" filter="url(#paperNoise)"/>
+          <!-- embossed corner florals -->
+          <g class="emboss-floral" opacity="0.35" stroke="#C8A86A" stroke-width="0.6" fill="none">
+            <path d="M14,14 C24,10 34,18 30,28 C40,24 46,34 38,42 C34,52 22,50 20,40 C10,44 4,34 12,26 C6,20 8,10 14,14 Z"/>
+            <path d="M386,14 C376,10 366,18 370,28 C360,24 354,34 362,42 C366,52 378,50 380,40 C390,44 396,34 388,26 C394,20 392,10 386,14 Z"/>
+            <path d="M14,546 C24,550 34,542 30,532 C40,536 46,526 38,518 C34,508 22,510 20,520 C10,516 4,526 12,534 C6,540 8,550 14,546 Z"/>
+            <path d="M386,546 C376,550 366,542 370,532 C360,536 354,526 362,518 C366,508 378,510 380,520 C390,516 396,526 388,534 C394,540 392,550 386,546 Z"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- LINER (visible when flap opens) -->
+      <div class="envelope-layer envelope-liner" aria-hidden="true">
+        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet">
+          <defs>
+            <linearGradient id="linerGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#EDE6D6"/>
+              <stop offset="100%" stop-color="#F7F3EA"/>
+            </linearGradient>
+            <pattern id="linerPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M20,4 C26,10 26,18 20,24 C14,18 14,10 20,4 Z" fill="none" stroke="#C8A86A" stroke-width="0.4" opacity="0.4"/>
+            </pattern>
+          </defs>
+          <path d="M0,0 L400,0 L400,20 L200,260 L0,20 Z" fill="url(#linerGrad)"/>
+          <path d="M0,0 L400,0 L400,20 L200,260 L0,20 Z" fill="url(#linerPattern)"/>
+        </svg>
+      </div>
+
+      <!-- INVITATION CARD (hidden inside, slides up) -->
+      <div class="envelope-card" id="envelope-card">
+        <svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="360" height="220" fill="#FFFDF9" stroke="#C8A86A" stroke-width="1"/>
+          <text x="180" y="90" text-anchor="middle" class="mini-card-names">Siraj &amp; Enjli</text>
+          <text x="180" y="120" text-anchor="middle" class="mini-card-date">23 . 08 . 2026</text>
+        </svg>
+      </div>
+
+      <!-- FRONT PANEL with cut triangular flap opening -->
+      <div class="envelope-layer envelope-front">
+        <svg viewBox="0 0 400 560" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="frontGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FBF7EF"/>
+              <stop offset="100%" stop-color="#F3EEE2"/>
+            </linearGradient>
+          </defs>
+          <!-- body minus flap triangle -->
+          <path d="M0,80 L400,80 L400,560 L0,560 Z" fill="url(#frontGrad)"/>
+          <!-- fold lines -->
+          <path d="M0,80 L200,260 L400,80" fill="none" stroke="#C8A86A" stroke-width="0.5" opacity="0.35"/>
+          <path d="M0,560 L200,300 L400,560" fill="none" stroke="#C8A86A" stroke-width="0.4" opacity="0.25"/>
+          <path d="M0,80 L200,300 L0,560" fill="none" stroke="#C8A86A" stroke-width="0.35" opacity="0.2"/>
+          <path d="M400,80 L200,300 L400,560" fill="none" stroke="#C8A86A" stroke-width="0.35" opacity="0.2"/>
+
+          <!-- corner floral embossing -->
+          <g opacity="0.3" stroke="#C8A86A" stroke-width="0.6" fill="none">
+            <path d="M20,100 C32,92 46,100 42,114 C56,110 64,124 54,134 C50,148 32,146 30,132 C16,138 6,124 18,114 C10,106 12,94 20,100 Z"/>
+            <path d="M380,100 C368,92 354,100 358,114 C344,110 336,124 346,134 C350,148 368,146 370,132 C384,138 394,124 382,114 C390,106 388,94 380,100 Z"/>
+          </g>
+          <use href="#floral-corner" x="0" y="0" opacity="0"/>
+        </svg>
+
+        <div class="envelope-front-copy">
+          <div class="flourish-mini" aria-hidden="true">
+            <svg width="60" height="20" viewBox="0 0 60 20"><path d="M0,10 C15,2 20,18 30,10 C40,2 45,18 60,10" fill="none" stroke="#C8A86A" stroke-width="0.8"/></svg>
+          </div>
+          <p class="envelope-names">SIRAJ &amp; ENJLI</p>
+          <p class="envelope-date">23 . 08 . 2026</p>
+        </div>
+      </div>
+
+      <!-- FLAP (rotates open) -->
+      <div class="envelope-layer envelope-flap" id="envelope-flap">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="flapGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FDFAF3"/>
+              <stop offset="100%" stop-color="#F6F1E6"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,0 L400,0 L200,260 Z" fill="url(#flapGrad)" stroke="#E7DFCC" stroke-width="1"/>
+          <g opacity="0.4" stroke="#C8A86A" stroke-width="0.5" fill="none">
+            <path d="M60,20 C90,8 120,20 110,45 M110,45 C140,35 150,60 125,72"/>
+            <path d="M340,20 C310,8 280,20 290,45 M290,45 C260,35 250,60 275,72"/>
+            <path d="M200,235 C185,215 215,215 200,235 Z"/>
+          </g>
+        </svg>
+
+        <!-- WAX SEAL -->
+        <button type="button" class="wax-seal" id="wax-seal" aria-label="Tap to open your wedding invitation">
+          <svg viewBox="0 0 120 120" width="100%" height="100%">
+            <defs>
+              <radialGradient id="waxGrad" cx="35%" cy="30%" r="75%">
+                <stop offset="0%" stop-color="#B9C4AC"/>
+                <stop offset="45%" stop-color="#A5B09D"/>
+                <stop offset="100%" stop-color="#7C8A72"/>
+              </radialGradient>
+              <radialGradient id="waxShine" cx="30%" cy="25%" r="35%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- drip blob shape -->
+            <path d="M60,6 C82,4 100,18 102,38 C118,44 118,68 100,76 C104,96 84,112 62,108 C48,120 24,116 18,98 C0,96 -4,72 12,60 C4,44 18,24 38,24 C42,10 52,6 60,6 Z"
+                  fill="url(#waxGrad)"/>
+            <circle cx="60" cy="60" r="46" fill="none" stroke="#8C9A80" stroke-width="1.5" opacity="0.6"/>
+            <text x="60" y="52" text-anchor="middle" class="seal-monogram-s">S</text>
+            <text x="60" y="80" text-anchor="middle" class="seal-monogram-e">E</text>
+            <circle cx="60" cy="66" r="1.6" fill="#5F6B54"/>
+            <ellipse cx="60" cy="60" rx="46" ry="46" fill="url(#waxShine)"/>
+          </svg>
+          <span class="seal-shine" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    </div><!-- /envelope-3d -->
+
+    <div class="envelope-invite-copy">
+      <p class="invite-eyebrow">You Are Invited</p>
+      <p class="invite-script">to celebrate our love</p>
+    </div>
+
+    <button type="button" class="tap-to-open" id="tap-to-open-btn" aria-label="Tap to open invitation">
+      <span>Tap to Open</span>
+      <svg class="chevron-down" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true">
+        <path d="M1,1 L9,9 L17,1" fill="none" stroke="#C8A86A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+  </div><!-- /envelope-scene -->
+</main>
+
+<audio id="bg-audio" src="assets/music/wedding-theme.mp3" preload="none" loop></audio>
+
+<button type="button" id="audio-toggle" class="audio-toggle" aria-label="Toggle background music" aria-pressed="false">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="icon-sound-on">
+    <path d="M4 9v6h4l5 5V4L8 9H4z" fill="#C8A86A"/>
+    <path d="M16.5 8.5a5 5 0 010 7" stroke="#C8A86A" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M19 6a9 9 0 010 12" stroke="#C8A86A" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+  </svg>
+</button>
+
+<script src="js/audio.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
